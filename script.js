@@ -1,7 +1,7 @@
 const navToggle = document.querySelector(".nav-toggle");
 const topnav = document.querySelector(".topnav");
-const navLinks = [...document.querySelectorAll(".topnav a")];
-const sections = [...document.querySelectorAll("main .section")];
+const navLinks = Array.from(document.querySelectorAll(".topnav a"));
+const sections = Array.from(document.querySelectorAll("main .section"));
 
 if (navToggle && topnav) {
   navToggle.addEventListener("click", () => {
@@ -18,26 +18,26 @@ if (navToggle && topnav) {
   });
 }
 
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+if (navLinks.length > 0 && sections.length > 0) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const current = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-    if (!visible) {
-      return;
+      if (!current) {
+        return;
+      }
+
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${current.target.id}`);
+      });
+    },
+    {
+      rootMargin: "-15% 0px -65% 0px",
+      threshold: [0.2, 0.4, 0.6]
     }
+  );
 
-    const currentId = visible.target.id;
-    navLinks.forEach((link) => {
-      const isActive = link.getAttribute("href") === `#${currentId}`;
-      link.classList.toggle("active", isActive);
-    });
-  },
-  {
-    rootMargin: "-20% 0px -60% 0px",
-    threshold: [0.2, 0.4, 0.6]
-  }
-);
-
-sections.forEach((section) => sectionObserver.observe(section));
+  sections.forEach((section) => observer.observe(section));
+}
