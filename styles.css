@@ -1,13 +1,11 @@
 :root {
-  --bg: #f7f7f4;
+  --bg: #ffffff;
   --surface: #ffffff;
-  --surface-soft: #fcfcfa;
-  --line: #d8d8d1;
-  --line-strong: #c3c7ca;
-  --text: #1f2933;
-  --muted: #5b6570;
-  --link: #1f5f8b;
-  --link-hover: #164766;
+  --line: #e3e6e8;
+  --text: #222b33;
+  --muted: #66707a;
+  --link: #1f5d86;
+  --link-hover: #164361;
   --serif: "Noto Serif SC", serif;
   --sans: "Noto Sans SC", sans-serif;
 }
@@ -27,7 +25,7 @@ body {
   font-family: var(--sans);
   color: var(--text);
   background: var(--bg);
-  line-height: 1.78;
+  line-height: 1.8;
 }
 
 a {
@@ -49,13 +47,13 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(247, 247, 244, 0.96);
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--line);
 }
 
 .masthead-inner {
-  width: min(1160px, calc(100% - 40px));
-  min-height: 66px;
+  width: min(1080px, calc(100% - 40px));
+  min-height: 62px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -66,9 +64,9 @@ img {
 .site-title {
   color: var(--text);
   font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: 1.02rem;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 .topnav {
@@ -80,7 +78,7 @@ img {
 .topnav a {
   position: relative;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .topnav a.active,
@@ -120,23 +118,21 @@ img {
 }
 
 .layout {
-  width: min(1160px, calc(100% - 40px));
-  margin: 30px auto 56px;
+  width: min(1080px, calc(100% - 40px));
+  margin: 34px auto 60px;
   display: grid;
-  grid-template-columns: 320px minmax(0, 1fr);
-  gap: 48px;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 52px;
 }
 
 .sidebar-inner {
   position: sticky;
-  top: 96px;
+  top: 92px;
 }
 
 .portrait {
-  width: 176px;
+  width: 170px;
   margin: 0 0 18px;
-  border: 1px solid var(--line-strong);
-  background: var(--surface);
 }
 
 .portrait img {
@@ -144,120 +140,67 @@ img {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center 22%;
+  border: 1px solid var(--line);
 }
 
 .sidebar h1,
 .section h2,
 .entry h3,
 .topic-block h3,
-.mini-card h3,
 .publication-item h3 {
   font-family: var(--serif);
 }
 
 .sidebar h1 {
-  margin: 0 0 6px;
-  font-size: 2rem;
-  line-height: 1.2;
+  margin: 0 0 4px;
+  font-size: 1.92rem;
+  line-height: 1.18;
+}
+
+.english-name,
+.affiliation,
+.publication-meta,
+.entry-role,
+.news-date,
+.intro-line,
+.publication-summary {
+  color: var(--muted);
 }
 
 .english-name {
   margin: 0;
-  color: var(--muted);
-  font-size: 0.98rem;
+  font-size: 0.96rem;
 }
 
 .position {
-  margin: 14px 0 12px;
-  font-weight: 500;
+  margin: 12px 0 4px;
+  font-weight: 600;
+  font-size: 0.96rem;
 }
 
-.bio {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.96rem;
+.affiliation {
+  margin: 0 0 16px;
+  font-size: 0.94rem;
 }
 
 .profile-list {
   list-style: none;
-  margin: 24px 0;
+  margin: 0 0 18px;
   padding: 0;
-  border-top: 1px solid var(--line);
+  font-size: 0.93rem;
 }
 
-.profile-list li {
-  display: grid;
-  gap: 4px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--line);
+.profile-list li + li {
+  margin-top: 8px;
 }
 
-.profile-list span:first-child {
-  color: var(--muted);
-  font-size: 0.84rem;
-}
-
-.sidebar-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 24px;
+.profile-list span {
+  color: var(--text);
+  font-weight: 500;
 }
 
 .sidebar-links a {
-  width: fit-content;
-}
-
-.sidebar-note,
-.topic-block,
-.metric-card,
-.mini-card {
-  border: 1px solid var(--line);
-  background: var(--surface);
-}
-
-.sidebar-note {
-  padding: 16px 18px;
-}
-
-.sidebar-note strong {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.sidebar-note p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.94rem;
-}
-
-.fact-list {
-  list-style: none;
-  margin: 18px 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.fact-list li {
-  padding: 12px 10px;
-  border: 1px solid var(--line);
-  background: var(--surface-soft);
-}
-
-.fact-list strong {
-  display: block;
-  font-size: 1.15rem;
-  line-height: 1.2;
-}
-
-.fact-list span {
-  display: block;
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 0.76rem;
-  line-height: 1.5;
+  font-size: 0.93rem;
 }
 
 .main {
@@ -265,34 +208,19 @@ img {
 }
 
 .section {
-  padding-bottom: 30px;
+  padding-bottom: 28px;
   border-bottom: 1px solid var(--line);
-  scroll-margin-top: 88px;
+  scroll-margin-top: 84px;
 }
 
 .section + .section {
-  margin-top: 34px;
-}
-
-.intro-section {
-  padding-top: 4px;
-}
-
-.intro-line,
-.section-note,
-.publication-summary {
-  color: var(--muted);
-  font-size: 0.96rem;
-}
-
-.intro-line {
-  margin: 0 0 8px;
+  margin-top: 30px;
 }
 
 .section h2 {
-  margin: 0 0 18px;
-  font-size: 1.75rem;
-  line-height: 1.3;
+  margin: 0 0 16px;
+  font-size: 1.62rem;
+  line-height: 1.28;
 }
 
 .section p {
@@ -301,12 +229,11 @@ img {
 
 .topic-block {
   margin-top: 18px;
-  padding: 16px 18px;
 }
 
 .topic-block h3 {
   margin: 0 0 10px;
-  font-size: 1.04rem;
+  font-size: 1.08rem;
 }
 
 .news-list,
@@ -323,23 +250,13 @@ img {
 
 .news-list li {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-columns: 96px minmax(0, 1fr);
   gap: 18px;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--line);
+  padding: 12px 0;
 }
 
 .news-list li:first-child {
   padding-top: 0;
-}
-
-.news-list li:last-child {
-  border-bottom: 0;
-}
-
-.news-date {
-  color: var(--muted);
-  font-size: 0.92rem;
 }
 
 .news-list p {
@@ -348,17 +265,15 @@ img {
 
 .entry-list {
   display: grid;
-  gap: 22px;
+  gap: 20px;
 }
 
 .entry {
   padding-bottom: 18px;
-  border-bottom: 1px solid var(--line);
 }
 
 .entry:last-child {
   padding-bottom: 0;
-  border-bottom: 0;
 }
 
 .entry-head {
@@ -369,95 +284,34 @@ img {
   margin-bottom: 6px;
 }
 
-.entry h3 {
+.entry h3,
+.publication-item h3 {
   margin: 0;
-  font-size: 1.16rem;
-  line-height: 1.52;
+  font-size: 1.12rem;
+  line-height: 1.55;
 }
 
 .entry-head span {
   flex-shrink: 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
-.entry-role,
-.publication-meta {
-  color: var(--muted);
-  font-size: 0.94rem;
-}
-
-.metric-grid,
-.expertise-grid {
-  display: grid;
-  gap: 14px;
-}
-
-.metric-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 8px;
-}
-
-.metric-card {
-  padding: 16px 18px;
-}
-
-.metric-card strong {
-  display: block;
-  font-size: 1.18rem;
-  line-height: 1.2;
-}
-
-.metric-card span {
-  display: block;
-  margin-top: 8px;
   color: var(--muted);
   font-size: 0.9rem;
 }
 
 .publication-list {
   display: grid;
-  gap: 22px;
-  margin-top: 20px;
+  gap: 18px;
 }
 
-.publication-item h3 {
-  margin: 0 0 8px;
-  font-size: 1.15rem;
-  line-height: 1.55;
-}
-
-.publication-item p:last-child {
+.publication-item p:last-child,
+.contact-line {
   margin-bottom: 0;
-}
-
-.expertise-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.mini-card {
-  padding: 16px 18px;
-}
-
-.mini-card h3 {
-  margin: 0 0 10px;
-  font-size: 1.04rem;
-}
-
-.mini-card p {
-  margin: 0;
-  color: var(--muted);
 }
 
 .compact-list li + li {
   margin-top: 6px;
 }
 
-.contact-line {
-  margin-bottom: 0;
-}
-
-@media (max-width: 960px) {
+@media (max-width: 920px) {
   .layout {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -468,18 +322,18 @@ img {
   }
 
   .portrait {
-    width: 152px;
+    width: 150px;
   }
 }
 
 @media (max-width: 760px) {
   .masthead-inner {
-    width: min(100% - 24px, 1160px);
-    min-height: 60px;
+    width: min(100% - 24px, 1080px);
+    min-height: 58px;
   }
 
   .layout {
-    width: min(100% - 24px, 1160px);
+    width: min(100% - 24px, 1080px);
     margin-top: 22px;
   }
 
@@ -509,26 +363,20 @@ img {
   }
 
   .news-list li,
-  .entry-head,
-  .metric-grid,
-  .expertise-grid {
+  .entry-head {
     grid-template-columns: 1fr;
     flex-direction: column;
     gap: 6px;
-  }
-
-  .fact-list {
-    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 560px) {
   .sidebar h1 {
-    font-size: 1.7rem;
+    font-size: 1.68rem;
   }
 
   .section h2 {
-    font-size: 1.5rem;
+    font-size: 1.42rem;
   }
 
   .portrait {
