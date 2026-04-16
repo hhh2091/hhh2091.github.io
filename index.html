@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>卜绍峰 | Academic Homepage</title>
+    <title>卜绍峰 | Reinforcement Learning Research</title>
     <meta
       name="description"
-      content="卜绍峰，中国科学院大学计算机应用技术博士生，研究方向包括强化学习、时空建模与大模型智能体系统。"
+      content="卜绍峰，中国科学院大学博士生，研究方向聚焦强化学习、长时序决策、大模型智能体系统与时空建模。"
     />
     <link
       rel="icon"
@@ -32,9 +32,10 @@
           <a href="#about" class="active">About</a>
           <a href="#news">News</a>
           <a href="#education">Education</a>
-          <a href="#experience">Experience</a>
           <a href="#research">Research</a>
+          <a href="#experience">Experience</a>
           <a href="#publications">Publications</a>
+          <a href="#expertise">Expertise</a>
           <a href="#awards">Honors</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -44,29 +45,38 @@
     <div class="layout">
       <aside class="sidebar">
         <div class="sidebar-inner">
-          <div class="portrait" aria-hidden="true">BSF</div>
+          <figure class="portrait">
+            <img src="./photo.jpg" alt="卜绍峰照片" />
+          </figure>
           <h1>卜绍峰</h1>
           <p class="english-name">Shaofeng Bu</p>
           <p class="position">Ph.D. Student, University of Chinese Academy of Sciences</p>
           <p class="bio">
-            研究方向主要包括强化学习、时空建模、大模型训练与智能体系统，关注算法方法与实际系统的结合。
+            研究聚焦强化学习、长时序决策、时空建模与大模型智能体系统，关注从方法设计到真实系统执行反馈的完整闭环。
           </p>
 
           <ul class="profile-list">
             <li><span>Email</span><a href="mailto:bushaofeng23@mails.ucas.ac.cn">bushaofeng23@mails.ucas.ac.cn</a></li>
-            <li><span>Affiliation</span><span>UCAS</span></li>
-            <li><span>Interests</span><span>Reinforcement Learning, LLM Agents, Spatio-temporal Modeling</span></li>
+            <li><span>Affiliation</span><span>University of Chinese Academy of Sciences</span></li>
+            <li><span>Interests</span><span>Reinforcement Learning, Long-Horizon Planning, LLM Agents</span></li>
+            <li><span>Status</span><span>Expected Graduation: 2028.06</span></li>
           </ul>
 
           <div class="sidebar-links">
-            <a href="./卜绍峰_简历_优化版.docx" download>Curriculum Vitae</a>
+            <a href="./卜绍峰_简历_优化版RL.docx" download>Curriculum Vitae</a>
             <a href="#publications">Selected Publications</a>
           </div>
 
           <div class="sidebar-note">
-            <strong>Research Summary</strong>
-            <p>第一作者 SCI 论文 3 篇，申请或授权专利 3 项，近期工作聚焦领域智能体系统的训练与执行闭环。</p>
+            <strong>Research Snapshot</strong>
+            <p>第一作者 SCI 论文 3 篇，第一作者申请或授权专利 3 项。当前重点关注强化学习训练稳定性、奖励设计与领域智能体执行闭环。</p>
           </div>
+
+          <ul class="fact-list">
+            <li><strong>3</strong><span>First-author SCI papers</span></li>
+            <li><strong>3</strong><span>Patents</span></li>
+            <li><strong>94%</strong><span>Task completion after self-repair</span></li>
+          </ul>
         </div>
       </aside>
 
@@ -75,13 +85,19 @@
           <p class="intro-line">Welcome to my academic homepage.</p>
           <h2>About</h2>
           <p>
-            我目前在中国科学院大学攻读计算机应用技术博士学位，研究聚焦于强化学习、Transformer
-            时空建模、大模型训练与智能体系统。我的工作主要围绕复杂决策问题中的状态表示、策略优化和系统落地展开，尤其关注如何将学习算法应用到具有真实约束的任务环境中。
+            我目前在中国科学院大学攻读计算机应用技术博士学位。我的研究以强化学习为主线，关注在复杂约束环境中构建可训练、可泛化、可解释的决策模型，尤其面向长时序路径规划、连续控制和真实执行反馈驱动的策略优化问题。
           </p>
           <p>
-            近阶段，我的研究与工程实践同时涉及两类问题：一类是面向平流层飞艇等长时序场景的强化学习路径规划，另一类是面向 EDA
-            工具链的领域大模型智能体。我希望在可觡释的建模方法、稳定的训练流程和可觠的执行反馈之间建立更紧密的联系。
+            近阶段的工作主要沿两条线展开。一条是面向平流层飞艇长期驻留任务的强化学习路径规划，研究如何将未来环境预报、时空表示和策略优化统一到同一框架中；另一条是面向 OpenROAD 等专业工具链的领域大模型智能体，探索利用真实执行结果、奖励设计与后训练方法提升代码智能体的可执行性与自修复能力。
           </p>
+          <div class="topic-block">
+            <h3>Current Research Interests</h3>
+            <ul class="plain-list">
+              <li>Reinforcement learning for long-horizon decision making and continuous control.</li>
+              <li>Reward design, training stability, and policy optimization in complex environments.</li>
+              <li>Execution-grounded RL fine-tuning for domain-specific LLM agents.</li>
+            </ul>
+          </div>
         </section>
 
         <section class="section" id="news">
@@ -90,19 +106,19 @@
             <li>
               <span class="news-date">2026.04</span>
               <div>
-                <p>更新个人学术主页，整理研究方向、代表性论文与近期工作。</p>
+                <p>更新个人主页，新增强化学习方向的研究内容、代表性论文和研究摘要。</p>
               </div>
             </li>
             <li>
-              <span class="news-date">2025.11 - 2026.04</span>
+              <span class="news-date">2026.04</span>
               <div>
-                <p>在硒钼科技（北京）有限公司担任算法研究员实习生，参与 OpenROAD-Agent 研发。</p>
+                <p>完成 OpenROAD-Agent 实习项目，脚本一次执行成功率由 34% 提升至 76%，多轮自修复后任务完成率达到 94%。</p>
               </div>
             </li>
             <li>
               <span class="news-date">2023.09</span>
               <div>
-                <p>进入中国科学院大学攻读计算机应用技术博士学位。</p>
+                <p>进入中国科学院大学攻读计算机应用技术博士学位，研究方向聚焦强化学习与大模型智能体系统。</p>
               </div>
             </li>
           </ul>
@@ -118,8 +134,7 @@
               </div>
               <p class="entry-role">Ph.D. in Computer Application Technology</p>
               <p>
-                研究方向包括强化学习、Transformer 时空建模、大模型训练与智能体系统。已发表第一作者 SCI
-                论文 3 篇，申请或授权专利 3 项。
+                研究方向包括强化学习、Transformer 时空建模、大模型训练与智能体系统。预计于 2028 年 6 月毕业，已发表第一作者 SCI 论文 3 篇，第一作者申请或授权专利 3 项。
               </p>
             </article>
             <article class="entry">
@@ -133,6 +148,66 @@
           </div>
         </section>
 
+        <section class="section" id="research">
+          <h2>Research</h2>
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Reinforcement Learning for Stratospheric Airship Path Planning</h3>
+              <span>Ongoing</span>
+            </div>
+            <p>
+              面向平流层飞艇长期驻留任务，我构建了基于 PPO 的 STF-RL 框架，在连续动作空间下统一建模位置、能量、环境预报与任务约束，重点解决长时序决策中的状态表示、信用分配与策略稳定性问题。
+            </p>
+            <ul class="plain-list">
+              <li>设计联合状态空间与多目标奖励函数，综合考虑驻留偏差、能量消耗与越界惩罚。</li>
+              <li>提出时间-高度双重位置编码 THDPE，对多时刻、多高度层环境预报信息进行联合编码。</li>
+              <li>引入任务条件化交叉注意力模块，使策略网络能够自适应聚焦与当前决策最相关的时空上下文。</li>
+              <li>通过分段奖励、阶段性 shaping 与 GAE 设计缓解长时序 RL 中的 credit assignment 问题。</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Reinforcement Learning for Domain-specific Code Agents</h3>
+              <span>Recent Work</span>
+            </div>
+            <p>
+              在 OpenROAD-Agent 项目中，我将强化学习方法用于领域代码智能体后训练，核心目标是利用真实工具执行结果提升模型的可执行性、API 准确性与自纠错能力，而不仅仅是文本级别的代码生成质量。
+            </p>
+            <ul class="plain-list">
+              <li>系统比较 PPO 与 GRPO，在 32B 模型显存受限场景下选用更适合在线 RL 的 GRPO 方案。</li>
+              <li>设计多维度 reward 函数，区分语法错误、API 幻觉调用与逻辑参数错误，并叠加自修复奖励。</li>
+              <li>在 veRL 框架下实现 actor/rollout 解耦、vLLM 并行采样和基于 NCCL 的权重同步闭环。</li>
+              <li>结合 KL 惩罚、reward 归一化、clip 控制与 LoRA 参数隔离，提升 RL 后训练稳定性。</li>
+            </ul>
+          </article>
+
+          <article class="entry">
+            <div class="entry-head">
+              <h3>Representative RL Outcomes</h3>
+              <span>Selected Results</span>
+            </div>
+            <div class="metric-grid">
+              <div class="metric-card">
+                <strong>34% → 76%</strong>
+                <span>OpenROAD TCL script first-pass success rate</span>
+              </div>
+              <div class="metric-card">
+                <strong>94%</strong>
+                <span>Overall task completion after iterative self-repair</span>
+              </div>
+              <div class="metric-card">
+                <strong>38% → 6%</strong>
+                <span>Hallucinated API invocation rate</span>
+              </div>
+              <div class="metric-card">
+                <strong>3.1 → 1.3</strong>
+                <span>Average repair rounds per task</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
         <section class="section" id="experience">
           <h2>Experience</h2>
           <article class="entry">
@@ -142,62 +217,61 @@
             </div>
             <p class="entry-role">算法研究员（实习）</p>
             <p>
-              参与 OpenROAD-Agent 的研发与训练，围绕 EDA 场景的代码生成、错误修复、RAG 检索增强和真实执行反馈构建端到端闭环。
-              通过面向脚本执行结果的数据筛选与后训练优化，将 TCL 脚本一次执行成功率从 34% 提升至 76%，多轮自修复后的整体任务完成率达到 94%。
-            </p>
-          </article>
-        </section>
-
-        <section class="section" id="research">
-          <h2>Research</h2>
-          <article class="entry">
-            <div class="entry-head">
-              <h3>时空前瞻强化学习路径规划</h3>
-              <span>Ongoing</span>
-            </div>
-            <p>
-              面向平流层飞艇长期驻留场景，构建基于未来风场感知的强化学习路径规划框架。研究重点包括多时刻、多高度层风场状态表示，基于 Transformer
-              的时空编码，以及与 PPO 结合的连续控制策略优化。
+              基于 Qwen3-Coder-32B 研发面向 OpenROAD 的 EDA 代码智能体 OpenROAD-Agent，构建“脚本生成 → 工具执行 → 报错捕获 → 迭代修复”的端到端执行闭环，覆盖布局布线、时序分析等核心流程。
             </p>
             <ul class="plain-list">
-              <li>提出“当前状态 + 未来风场”联合状态表示，用于建模复杂时变环境。</li>
-              <li>设计时间-高度双重位置编码 THDPE，以增强时空依赖表达能力。</li>
-              <li>关注驻留性能、能量管理与长时序决策稳定性的统一优化。</li>
+              <li>主导垂直领域数据集构建，利用 OpenROAD 实际执行结果对脚本进行自动化验证与筛选。</li>
+              <li>设计两阶段 SFT 流程，分别针对代码生成与错误修复进行微调。</li>
+              <li>落地 LoRA / QLoRA、8-bit Optimizer、Gradient Checkpointing、CPU Offloading 等训练优化方案。</li>
+              <li>引入 RAG 检索增强机制，缓解工具调用 hallucination 并提升领域代码生成质量。</li>
             </ul>
-          </article>
-          <article class="entry">
-            <div class="entry-head">
-              <h3>领域智能体系统训练与执行闭环</h3>
-              <span>Recent Work</span>
-            </div>
-            <p>
-              面向 OpenROAD 等专业工具链，探索大模型从“生成代码”到“执行任务”的完整能力链路，包括指令微调、错误修复训练、知识检索增强以及基于真实工具执行反馈建模。
-            </p>
           </article>
         </section>
 
         <section class="section" id="publications">
           <h2>Selected Publications</h2>
-          <p class="section-note">以下列出部分代表性论文。完整经历可见简历。</p>
+          <p class="section-note">以下列出与强化学习方向最相关的代表性论文，完整论文与专利信息可见简历。</p>
           <ol class="publication-list">
             <li class="publication-item">
               <h3>Deep Reinforcement Learning-Based Path Planning for Airship in Uncertain Wind Field</h3>
-              <p class="publication-meta">Shaofeng Bu, et al. <em>Advances in Space Research</em>. First Author.</p>
+              <p class="publication-meta">Shaofeng Bu, et al. <em>Advances in Space Research</em>. IF≈2.6, CAS Q3, First Author.</p>
               <p>
-                针对不确定风场条件下的飞艇路径规划问题，研究基于深度强化学习的动态决策方法，兼顾航迹质量与环境适应性。
+                面向不确定风场条件下的飞艇路径规划问题，研究基于深度强化学习的动态决策方法，验证强化学习在复杂环境扰动下实现稳健路径规划的有效性。
               </p>
             </li>
             <li class="publication-item">
               <h3>Adaptive Altitude-Adjusting Path Planning for Airships Based on Transformer-Based Reinforcement Learning</h3>
-              <p class="publication-meta">Shaofeng Bu, et al. <em>Aerospace Science and Technology</em>. First Author.</p>
+              <p class="publication-meta">Shaofeng Bu, et al. <em>Aerospace Science and Technology</em>. IF≈5.6, CAS Q2, First Author.</p>
               <p>
-                将 Transformer 时空建模与强化学习结合，用于多高度层环境中的自适应高度调节与长时序路径优化。
+                将 Transformer 时空建模与强化学习结合，构建多高度层环境中的自适应高度调节策略，提升长时序路径规划中的环境感知与决策能力。
               </p>
             </li>
           </ol>
           <p class="publication-summary">
-            Additional outputs: 第一作者 SCI 论文共 3 篇，申请或授权专利 3 项。
+            Additional outputs: 第一作者 SCI 论文共 3 篇，第一作者申请或授权专利 3 项。
           </p>
+        </section>
+
+        <section class="section" id="expertise">
+          <h2>Technical Expertise</h2>
+          <div class="expertise-grid">
+            <article class="mini-card">
+              <h3>Reinforcement Learning</h3>
+              <p>PPO、GRPO、策略梯度、GAE、复杂环境建模、奖励设计、训练稳定性优化。</p>
+            </article>
+            <article class="mini-card">
+              <h3>LLM Training</h3>
+              <p>LoRA / QLoRA、高效微调、SFT、指令微调、多卡训练与 vLLM 推理部署。</p>
+            </article>
+            <article class="mini-card">
+              <h3>Agent Systems</h3>
+              <p>工具调用、任务规划、多轮交互、自我修正、执行闭环与领域知识检索增强。</p>
+            </article>
+            <article class="mini-card">
+              <h3>Systems and Tooling</h3>
+              <p>Python、PyTorch、Transformers、PEFT、veRL、NCCL、ZeRO、实验复现与工程化部署。</p>
+            </article>
+          </div>
         </section>
 
         <section class="section" id="awards">
@@ -215,7 +289,7 @@
         <section class="section" id="contact">
           <h2>Contact</h2>
           <p>
-            如果你希望交流强化学习、时空建模、LLM Agent 或垂直领域智能体系统，欢迎通过邮件联系我。
+            如果你希望交流强化学习、时空建模、大模型后训练或垂直领域智能体系统，欢迎通过邮件联系我。
           </p>
           <p class="contact-line">
             Email:
